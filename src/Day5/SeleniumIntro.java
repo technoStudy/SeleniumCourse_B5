@@ -13,8 +13,14 @@ public class SeleniumIntro {
         // Create a new Webdriver object
         WebDriver driver = new ChromeDriver();
 
+        // Maximize the browser window
+        driver.manage().window().maximize();
+
         // Navigate to website
         driver.get("https://techno.study/");
+
+        // Quit browser
+        driver.quit();
 
     }
 
