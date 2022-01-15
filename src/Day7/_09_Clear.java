@@ -36,6 +36,8 @@ public class _09_Clear {
         WebElement showMessageButton = driver.findElement(By.cssSelector("button[onclick='showInput();']"));
         showMessageButton.click(); // submit form and refresh page
 
+        driver.quit();
+
     }
 
 }
