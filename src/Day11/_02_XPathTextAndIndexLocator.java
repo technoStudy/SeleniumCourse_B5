@@ -28,7 +28,7 @@ public class _02_XPathTextAndIndexLocator {
         WebElement header2 = driver.findElement(By.xpath("//p[contains(text(),'mentorship')]"));
         String headerText2 = header2.getText();
 
-        // In Xpath we can move from child to parent using double slash //
+        // In Xpath we can move from parent to child using double slash //
         WebElement anotherHeader = driver.findElement(By.xpath("//div[@class='t181__wrapper']//p"));
 
         // In XPath we can move from child to parent using /..
