@@ -29,6 +29,13 @@ public class _05_ActionsClass_HoverOver {
         wait.until(ExpectedConditions.elementToBeClickable(carpets));
         carpets.click();
 
+        WebElement beauty = driver.findElement(By.xpath("//a[text()='Beauty']"));
+        actions.moveToElement(beauty).perform();
+
+        WebElement perfume = driver.findElement(By.xpath("//a[text()='Perfume']"));
+        wait.until(ExpectedConditions.elementToBeClickable(perfume));
+        perfume.click();
+
         driver.quit();
 
     }
