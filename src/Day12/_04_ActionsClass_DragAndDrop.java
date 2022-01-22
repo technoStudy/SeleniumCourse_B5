@@ -24,17 +24,24 @@ public class _04_ActionsClass_DragAndDrop {
         proceedToWebsiteButton.click();
 
         WebElement fiveThousandButton = driver.findElement(By.xpath("(//li[@id='fourth']//a)[2]"));
-
         WebElement debitAmountTarget = driver.findElement(By.id("amt7"));
 
         Actions actions = new Actions(driver);
         actions.dragAndDrop(fiveThousandButton, debitAmountTarget).perform();
 
         WebElement bankAccountButton = driver.findElement(By.xpath("//li[@id='credit2']//a"));
-
         WebElement debitAccountTarget = driver.findElement(By.id("bank"));
 
         actions.dragAndDrop(bankAccountButton, debitAccountTarget).perform();
+
+        WebElement creditSideAmountTarget = driver.findElement(By.id("amt8"));
+
+        actions.dragAndDrop(fiveThousandButton, creditSideAmountTarget).perform();
+
+        WebElement salesButton = driver.findElement(By.xpath("//li[@id='credit1']//a"));
+        WebElement creditSideAccountTarget = driver.findElement(By.id("loan"));
+
+        actions.dragAndDrop(salesButton, creditSideAccountTarget).perform();
 
         driver.quit();
 
